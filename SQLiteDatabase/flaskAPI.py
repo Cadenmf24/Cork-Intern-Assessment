@@ -20,6 +20,18 @@ class Getcyberassets(Resource):
             
         return (cyberAssetsList, 201)
 
+class Getcyberasset(Resource):
+
+    def get(self, primaryid):
+
+        if primaryid != None:
+            cyberAsset = getCyberAsset(primaryid)
+
+            return (cyberAsset, 201)
+    
+        return("ERROR, Asset does not exist", 406)
+    
+    
 class Deletecyberassets(Resource):
     
     def delete(self, primaryid):

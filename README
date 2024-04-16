@@ -1,0 +1,21 @@
+After working on this for ~ an hour here is my progress report.
+
+This is my first time using SQLite and it is a very unique way of functioning. (Stack OverFlow was my best friend)
+Most of my time spent was understanding and learning how SQLite work. I have created helper functions in order to make visiability easier.
+
+Most of my functioning are self explaintory, but those that are not I have commented on them what they do and how they function.
+
+If i had more time, I would be able to complete getting a singular asset along with properly implementing a delete and update function
+
+
+Instructions:
+
+Run server.py
+
+Once it has ran, you can add /cyberassets to the end of the url to get the list of all the assets I included
+
+for the sake of testing, the sql builds everything and then once the server closes, it will delete the tables
+    You can find more detail on that in (schema.sql)
+
+If you are interested in the helper function it is located in (dbUtil.py)
+    This is what I used for my SQL project on my resume, it clears up some clutter

@@ -1,12 +1,13 @@
 from dbUtil import *
 
-def getCyberAssets():
+def getCyberAssets(): # Returns all of the cyberAssets, joins serialnumbers
     result = exec_get_all("SELECT name, type, os, serialNumber FROM cyberassets inner join serialnumbers ON cyberassets_id = cyberassets.id")
     return result
-    
-    result = exec_get_all('select courses.id, c_number, c_title, c_details, dept_id, department.name, college.name FROM courses inner join department ON department.id = courses.dept_id inner join college ON college.id = department.college_id order by id asc')
 
+def getCyberAsset(primaryId): # reuturns one cyber asset
 
-def deleteCyberAssets(primaryid):
+    result = exec_get_all("SELECT name, type, os, SerialNumber FROM cyberassets inner join serialnumber ON cyberassets_id = cyberassets.id WHERE cyberassets.id = %s", [primaryId])
+
+def deleteCyberAssets(primaryid): # deletes cyber asset
     exec_commit('DELETE FROM cyberassets WHERE id = %s', [primaryid])
     

@@ -10,9 +10,11 @@ CORS(app)
 
 api = Api(app)
 
-
 api.add_resource(Getcyberassets, "/cyberassets")
-api.add_resource(Deletecyberassets, "/cyberassets")
+
+api.add_resource(Deletecyberassets, "/cyberassets/<int:primaryid>")
+
+api.add_resource(Getcyberasset, "/cyberassets/<int:primaryid>")
 
 if __name__ == '__main__':
     print("Loading db")
