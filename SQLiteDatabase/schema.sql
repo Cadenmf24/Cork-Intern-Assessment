@@ -12,7 +12,7 @@ CREATE TABLE cyberassets (
 CREATE TABLE serialnumber (
     id SERIAL PRIMARY KEY NOT NULL,
     cyberassets_id INT NOT NULL REFERENCES cyberassets(id),
-    number INT
+    serialNumber INT
 );
 
 
@@ -25,7 +25,7 @@ INSERT INTO cyberassets(name, type, os)
 INSERT INTO cyberassets(name, type, os)	
         VALUES ('Lang PC', 'PC' 'Apple');
 		
-INSERT INTO serialnumber(number, cyberassets_id)	
+INSERT INTO serialnumber(serialnum, cyberassets_id)	
         VALUES (15528375, 1);
 INSERT INTO serialnumber(name, cyberassets_id)	
         VALUES (666772727, 2);
