@@ -51,7 +51,7 @@ def exec_sql_file(path):
     cur = conn.cursor()
 
     with open(full_path, 'r') as file:
-        cur.execute(file.read())
+        cur.executescript(file.read())
     
     conn.commit()
     conn.close()
