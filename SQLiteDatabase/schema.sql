@@ -1,5 +1,5 @@
-DROP table if EXISTS cyberassets CASCADE;
-DROP table if EXISTS serialnumbers CASCADE;
+DROP table if EXISTS cyberassets;
+DROP table if EXISTS serialnumbers;
 
 
 CREATE TABLE cyberassets (

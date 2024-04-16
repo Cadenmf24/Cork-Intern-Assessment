@@ -55,6 +55,3 @@ def exec_sql_file(path):
     
     conn.commit()
     conn.close()
-
-
-print(exec_get_all("SELECT COUNT(*) FROM movies"))
